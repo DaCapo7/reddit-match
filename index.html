@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel='stylesheet' href='style.css'>
+<script
+src="https://code.jquery.com/jquery-3.4.1.js"
+integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+crossorigin="anonymous"></script>
+<script src='script.js'>
+</script>
+</head>
+<body>
+<h1>Reddit match</h1>
+<h3 class="caption">Add the link to the subreddits you want to match</h3>
+<div id="sublist">
+    <input type=text placeholder="ex: announcements">
+    <button id="addsub">+</button><button id="remsub">-</button>
+</div>
+<h3 class="caption">Select the level of comparaison (1 = lower level but better speed 7 = better level but lower speed AND BIG RISK OF ERROR)</h3>
+<p><i>depending of your internet connection</i></p>
+
+
+<p id="digitinfo">3</p><input type="range" min="1" max="7" value="3" id="digit"><br>
+
+
+<button id="startbut">Start !</button>
+<div id="charge"><div id="green"></div></div>
+
+<div id="output+how">
+<div id="outputlist">
+    <p id="nthtoshow" style="color:rgb(197, 197, 197)">Nothing to show yet</p>
+</div>
+<div id="howdoesitwork">The program in backend takes a specific number of hot posts of a reddit(so that
+we will have many comments). Then it takes the users who posted the posts plus all the users who commented below it.
+The program repeats this simple instruction for each given subreddit. Then an simple algorithm compare the 
+lists and send to client. However, the reddit api is really secured so we cannot make more than 60 requests per minutes.
+See all the program : <a>github</a></div>
+</div>
+</body>
+<html>
